@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enroll Now - Mishon Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">Mishon Academy</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#courses" class="nav-link">My Courses</a></li>
+                <li><a href="login.html" class="nav-link">Login</a></li>
+                <li><a href="enroll.html" class="nav-link active enroll-btn">Enroll Now</a></li>
+                <li><a href="index.html#about" class="nav-link">About Me</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" style="min-height: 60vh;">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line highlight">Enroll Now</span>
+            </h1>
+        </div>
+    </section>
+
+    <section style="padding: 80px 0; background: white;">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="background: white; padding: 50px; border-radius: 20px; box-shadow: 0 10px 50px rgba(0,0,0,0.1);">
+                    <div id="enrollContent" style="font-size: 18px; line-height: 1.8; color: #333;">
+                        <!-- Populated by JS -->
+                    </div>
+                    
+                    <div style="margin-top: 40px; padding: 30px; background: #f8f9fa; border-radius: 15px; border-left: 4px solid #ff6f00;">
+                        <h3 style="color: #1a237e; margin-bottom: 15px;">Get Started Today</h3>
+                        <p style="margin-bottom: 20px;">Contact us to begin your journey to academic excellence:</p>
+                        <div style="display: flex; flex-direction: column; gap: 15px;">
+                            <a href="mailto:moshgulhasan@gmail.com" style="display: inline-flex; align-items: center; gap: 10px; color: #ff6f00; text-decoration: none; font-weight: 600;">
+                                <span style="font-size: 24px;">📧</span>
+                                moshgulhasan@gmail.com
+                            </a>
+                            <a href="https://www.youtube.com/@Basicvaiya-s2l" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; color: #ff6f00; text-decoration: none; font-weight: 600;">
+                                <span style="font-size: 24px;">📺</span>
+                                Visit YouTube Channel
+                            </a>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 30px; text-align: center;">
+                        <a href="index.html" class="cta-secondary" style="display: inline-block;">← Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Mishon Academy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const description = localStorage.getItem('enrollDescription') || 
+                'Welcome to Mishon Academy! Contact us to enroll in our courses and start your journey to academic excellence.';
+            
+            document.getElementById('enrollContent').innerHTML = description.replace(/\n/g, '<br>');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest Portal - Mishon Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="portal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="portal-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="logo-icon">👤</span>
+                    <span class="logo-text">Guest</span>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="sidebar-link active" onclick="showAllCourses()">
+                    <span>📚</span> All Courses
+                </a>
+                <a href="#" class="sidebar-link logout" onclick="logout()">
+                    <span>🚪</span> Logout
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div id="coursesView">
+                <div class="portal-header">
+                    <h1>All Courses</h1>
+                    <p>Browse all available courses</p>
+                </div>
+
+                <div id="coursesList" class="course-grid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <div id="contentView" style="display: none;">
+                <button class="back-btn" onclick="showAllCourses()">← Back to Courses</button>
+                <h2 id="courseTitle" style="font-family: 'Playfair Display', serif; color: var(--primary); margin: 20px 0;"></h2>
+                
+                <div class="content-tabs">
+                    <button class="tab-btn active" onclick="showContentType('classes')">Classes</button>
+                    <button class="tab-btn" onclick="showContentType('exams')">Exams</button>
+                </div>
+
+                <div id="classesContent" class="content-tab-panel active">
+                    <!-- Populated by JS -->
+                </div>
+
+                <div id="examsContent" class="content-tab-panel">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="guest.js"></script>
+</body>
+</html>
